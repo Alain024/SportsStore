@@ -18,7 +18,8 @@ angular
     'ngRoute',
     'ngSanitize',
     'ngTouch',
-    'sportsStore'
+    'sportsStore',
+    'sportsStoreAdmin',
   ])
 
 
@@ -38,13 +39,14 @@ angular
       templateUrl: 'views/productList.html',
       controller: 'productListCtrl'
     })
-    // .when('/login'), {
-    //   templateUrl: 'views/adminLogin.html'
-    // }
-    // .when('/main'), {
-    //   templateUrl: 'views/adminMain.html',
-    // }
-    // .otherwise({
-    //   redirectTo: '/login'
-    // });
+    .when('/login', {
+      templateUrl: 'views/adminLogin.html',
+      controller: 'authUrlCtrl'
+    })
+    .when('/main', {
+      templateUrl: 'views/adminMain.html',
+    })
+    .otherwise({
+      redirectTo: '/login'
+    });
 });

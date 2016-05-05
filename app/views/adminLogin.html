@@ -1,4 +1,4 @@
-<div class="well" ng-controller="authCtrl">
+<div class="well">
     <div class="alert alert-info" ng-hide="autheticationError">
         Enter your username and password and click Lon In to authenticate
     </div>
@@ -18,7 +18,7 @@
         ng-model="password" required />
       </div>
       <div class="text-center">
-        <button ng-click="autheticate(username, password)"
+        <button ng-click="authenticate(username, password)"
           ng-disabled="authForm.$invalid"
           class="btn btn-primary">
             Log In
